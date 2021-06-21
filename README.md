@@ -24,7 +24,7 @@ Sistema para fazer elogio ao próximo por meio de tags.
 # Clone este repositório
 $ git clone https://github.com/zthiago15/NLW-06
 
-# Execute a aplicação em modo de desenvolvimento
+# Executar aplicação
 $ yarn dev
 ```
 
