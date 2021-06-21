@@ -55,6 +55,19 @@ Sendo assim, não há bloqueio de requisições(Non-blocking IO), então podemos
 * _DELETE_ -> deleta um dado;
 * _PATCH_ -> altera um dado específico.
 
+### Comandos básicos:
+
+#### Inicialização e download de dependências
+* __yarn init -y__ -> inicializa *package.json* no seu projeto. *-y*, no final do comando, faz o cadastro dos dados de nome, versão, main e licença automaticamente.
+* __yarn tsc --init__ -> inicializa o TS.
+* __yarn tsc__ -> converte TS para JS para o Node.js executar. O Node.js não compreende o TypeScript.
+* __yarn add typescript -D__ -> adiciona o TypeScript em mode de desenvolvimento, quando for pra produção, o código será convertido para JavaScript.
+* __yarn add express__ -> adiciona o framework express no projeto.
+* __yarn add @types/express -D__ -> baixa as tipagens do express em modo de desenvolvimento.
+* __yarn add ts-node-dev -D__ -> essa biblioteca converte arquivos TS em JS automaticamente, para não ficar criando arquivos com a extensão *.js* toda vez que queremos executar o projeto.
+
+#### Execução 
+* __yarn dev__ -> Uma forma curta par executa o servidor na porta 3000 e o comando que definimos. Definimos o comando *dev* dentro de "scripts", no package.json. Essa propriedade recebe o comando: *ts-node-dev src/server.ts*. Com essa configuração, não precisamos digitar *yarn ts-node-dev src/server.ts* toda vez que executarmos o projeto.
 
 ---
 Licença MIT ©
