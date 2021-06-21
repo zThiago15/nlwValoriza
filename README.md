@@ -1,4 +1,8 @@
 # NLW Valoriza (Next Level week - 6ª edição) 🚀
+[![nodejs-badge][nodejs-img]][nodejs]
+
+[nodejs-img]: https://img.shields.io/badge/Node.js-14.17-green
+[nodejs]: js.org/en/
 
 ## Status do projeto:
 🚧 Em andamento... 🚧
