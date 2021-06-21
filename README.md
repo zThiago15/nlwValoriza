@@ -44,7 +44,13 @@ Sendo assim, não há bloqueio de requisições(Non-blocking IO), então podemos
 ### API(Application Programming Interface)
   É um modelo/padrão que temos nosso projeto para separar o sistema do lado cliente(HTML, CSS, JavaScript, frameworks, etc) do lado servidor(regras de negócio, conexão com Banco de Dados, autenticação, etc). Então, teremos as requisições(*request*) do usuário por meio de rotas e o servidor lhe retorna uma resposta(*response*) em formato JSON.
   
-
+### Principais métodos HTTP 
+*GET* -> seleciona dados;
+*POST* -> cadastra um dado;
+*PUT* -> editar um dado;
+*DELETE* -> deleta um dado;
+*PATCH* -> altera um dado específico.
+...
 
 
 
