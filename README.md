@@ -50,8 +50,6 @@ Sendo assim, não há bloqueio de requisições(Non-blocking IO), então podemos
 * _PUT_ -> editar um dado;
 * _DELETE_ -> deleta um dado;
 * _PATCH_ -> altera um dado específico.
-...
-
 
 
 ---
