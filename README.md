@@ -4,7 +4,7 @@
 🚧 Em andamento... 🚧
 
 ## Descrição 📌
-Sistema para fazer elogio ao próximo por meio de tags. 
+Sistema para fazer elogio a outros usuários por meio de tags. 
 
 --- 
 
