@@ -55,6 +55,8 @@ Sendo assim, não há bloqueio de requisições(Non-blocking IO), então podemos
 * _DELETE_ -> deleta um dado;
 * _PATCH_ -> altera um dado específico.
 
+Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulário. 
+
 ### Comandos básicos:
 
 #### Inicialização e download de dependências
