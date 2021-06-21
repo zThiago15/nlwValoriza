@@ -9,7 +9,6 @@ Sistema para fazer elogio ao próximo por meio de tags.
 --- 
 
 ## Tecnologias 💻
-* [Visual Studio Code](https://code.visualstudio.com/) - Ambiente de desenvolvimento integrado.
 * [Node.js](https://nodejs.org/en/) - Baixe a versão recomendada LTS.
 * [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable) - Gerenciador de pacotes, similar ao npm do Node.js.
 * [Express](https://expressjs.com/pt-br/) - Framework para desenvolver back-end com Node.js.
