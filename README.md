@@ -38,7 +38,7 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 * `/test` -> Testando rota GET
 * `/test-post` -> Testando rota POST
 
-## Anotações 📝
+## Aula 1 - Litoff (Anotações 📝)
 
 ### Origem e funcionamento do Node.js
   Criado por Ryan Dahl, em 2009, pela necessidade de saber o progresso de seu upload, porém sempre precisar fazer novas requisições para saber a porcentagem do envio. Após pesquisas, Ryan percebeu que JavaScript aceita requisições assíncronas e iniciou o desenvolvimento do Node.js.
@@ -70,6 +70,10 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 
 #### Execução 
 * __yarn dev__ -> Uma forma curta par executa o servidor na porta 3000 e o comando que definimos. Definimos o comando *dev* dentro de "scripts", no package.json. Essa propriedade recebe o comando: *ts-node-dev src/server.ts*. Com essa configuração, não precisamos digitar *yarn ts-node-dev src/server.ts* toda vez que executarmos o projeto.
+
+## Aula 2 - Maximun Speed (Anotações 📝)
+
+
 
 ---
 Licença MIT ©
