@@ -69,8 +69,8 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 * __yarn add @types/express -D__ -> baixa as tipagens do express em modo de desenvolvimento.
 * __yarn add ts-node-dev -D__ -> essa biblioteca converte arquivos TS em JS automaticamente, para não ficar criando arquivos com a extensão *.js* toda vez que queremos executar o projeto.
 
-#### Executar 
-* __yarn dev__ -> Uma forma curta par executa o servidor na porta 3000 e o comando que definimos. Definimos o comando *dev* dentro de "scripts", no package.json. Essa propriedade recebe o comando: *ts-node-dev src/server.ts*. Com essa configuração, não precisamos digitar *yarn ts-node-dev src/server.ts* toda vez que executarmos o projeto.
+#### Execução
+* __yarn dev__ -> Uma forma curta para executar o servidor na porta 3000. Definimos o comando *dev* dentro de "scripts", no package.json. Essa propriedade recebe o comando: *ts-node-dev src/server.ts*. Com essa configuração, não precisamos digitar *yarn ts-node-dev src/server.ts* toda vez que executarmos o projeto, somente yarn dev, agilizando o desenvolvimento.
 
 --- 
 
@@ -90,16 +90,19 @@ Obs: não é aconselhável usar SQLite com o projeto em produção por não ser 
 
 ### Instalação 
 * _yarn add typeorm reflect-metadata sqlite3_ -> baixa as 3 dependências de uma vez(). *reflect-metadata* nos permite adicionar os *decorators*(@) as classes e funções, lhes atribuindo um apelido.
-*
+
+
 ### Migrations 
   É um controle de versionamento de código SQL. Mantem a versão mais recente dos códigos do Banco de dados, assim todo time usa a mesma versão. Nesse projeto, é usado o TypeORM Migrations.
   
 * Documentação do TypeORM: https://typeorm.io/#/
 
+
 ### Comandos de migration:
 * _yarn typeorm migration:create -n NameEntity_ -> cria um arquivo de uma entidade
 * _yarn typeorm migration:run_-> cadastra a migration com os dados SQL digitados
 * _yarn typeorm migration:revert_-> remove a última migration cadastrada
+
 
 ### Camadas do projeto:
 * __Entity__ -> fica registrado as entidades que serão passadas pro banco
