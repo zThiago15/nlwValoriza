@@ -82,8 +82,8 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 * __Body params__ -> são enviados dentro do corpo da requisição(POST, PUT e PATCH) como objeto dentro de um arquivo JSON.
 
 ### Formas de usar banco de dados no projeto:
-* Inserir driver de um BD no projeto, logo usuraremos código SQL;
-* [Knex.js](http://knexjs.org/): é um query builder(construtor de consultas).  Não precisamos mexer tanto com sintaxe SQL e tem integração com vários tipos de Banco de Dados(MySQL, SQLite3, Postgres, etc)
+* Inserir driver de um BD no projeto, porém temos que mexer com código SQL;
+* [Knex.js](http://knexjs.org/): é um query builder(construtor de consultas).  Não precisamos mexer tanto com sintaxe SQL e tem integração com vários tipos de Banco de Dados(MySQL, SQLite3, Postgres, etc);
 * [TypeORM(Object Relacional Mapper)](https://typeorm.io/#/): transforma objetos do código para entidade, assim o banco de dados compreende a sintaxe.
 
 Obs: não é aconselhável usar SQLite com o projeto em produção por não ser tão robusto quando outros bancos. 
