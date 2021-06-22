@@ -71,9 +71,41 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 #### Execução 
 * __yarn dev__ -> Uma forma curta par executa o servidor na porta 3000 e o comando que definimos. Definimos o comando *dev* dentro de "scripts", no package.json. Essa propriedade recebe o comando: *ts-node-dev src/server.ts*. Com essa configuração, não precisamos digitar *yarn ts-node-dev src/server.ts* toda vez que executarmos o projeto.
 
+--- 
+
 ## Aula 2 - Maximun Speed (Anotações 📝)
 
+### Tipos de parâmetros nas requisições(GET, POST, PUT, DELETE..)
+* __Route params__ -> parâmetros dentro da rota. Ex: http://localhost:3000/livro/**69865498**
+* __Query params__ -> filtro/pesquisa do usuário(parâmetro opcional). Ex: http://localhost:3000/jogo**?name=red-dead-redemption&price=100**
+* __Body params__ -> são enviados dentro do corpo da requisição(POST, PUT e PATCH) como objeto dentro de um arquivo JSON.
 
+### Formas de usar banco de dados no projeto:
+* Inserir driver de um BD no projeto, logo usuraremos código SQL;
+* Knex.js: é um query builder(construtor de consultas).  Não precisamos mexer tanto com sintaxe SQL e tem integração com vários tipos de Banco de Dados(MySQL, SQLite3, Postgres, etc)
+* TypeORM(Object Relacional Mapper): transforma objetos do código para entidade, assim o banco de dados compreende a sintaxe.
+
+Obs: não é aconselhável usar SQLite com o projeto em produção por não ser tão robusto quando outros bancos. 
+
+### Comando para instalar
+* yarn add typeorm reflect-metadata sqlite3 -> baixa as 3 dependências de uma vez(). *reflect-metadata* nos permite adicionar os *decorators*(@) as classes e funções, lhes atribuindo um apelido.
+*
+### Migrations 
+  É um controle de versionamento de código SQL. Mantem a versão mais recente dos códigos do Banco de dados, assim todo time usa a mesma versão. Nesse projeto, é usado o TypeORM Migrations.
+  
+* Documentação TypeORM: https://typeorm.io/#/
+### Comandos de migration:
+* yarn typeorm migration:create -n *NameEntity* -> cria um arquivo de uma entidade
+* yarn typeorm migration:run -> cadastra a migration com os dados SQL digitados
+* yarn typeorm migration:revert -> remove a última migration cadastrada
+
+### Camadas do projeto:
+* Entity -> fica registrado as entidades que serão passadas pro banco
+* Repository -> responsável por fazer a comunicação(CREATE, READ, UPDATE, DELETE) entre a entidade e o BD.
+* Service -> as regras gerais do projeto, responsável pela autenticação, verificação, etc.
+* Controller -> Seria **request, response**: recebe as informações do servidor e as passa para a camada service.
+
+Arquivo *routes.ts* -> novo arquivo onde ficarão as rotas que serão passadas para o Controller.
 
 ---
 Licença MIT ©
