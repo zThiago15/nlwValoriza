@@ -39,7 +39,7 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 * `/test-post` -> Testando rota POST
 * `/users` -> Criar usuário
 
-## Aula 1 - Litoff (Anotações 📝)
+## Aula 1 - Liftoff (Anotações 📝)
 
 ### Origem e funcionamento do Node.js
   Criado por Ryan Dahl, em 2009, pela necessidade de saber o progresso de seu upload, porém sempre precisar fazer novas requisições para saber a porcentagem do envio. Após pesquisas, Ryan percebeu que JavaScript aceita requisições assíncronas e iniciou o desenvolvimento do Node.js.
