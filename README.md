@@ -68,7 +68,7 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 * __yarn add @types/express -D__ -> baixa as tipagens do express em modo de desenvolvimento.
 * __yarn add ts-node-dev -D__ -> essa biblioteca converte arquivos TS em JS automaticamente, para não ficar criando arquivos com a extensão *.js* toda vez que queremos executar o projeto.
 
-#### Execução 
+#### Executar 
 * __yarn dev__ -> Uma forma curta par executa o servidor na porta 3000 e o comando que definimos. Definimos o comando *dev* dentro de "scripts", no package.json. Essa propriedade recebe o comando: *ts-node-dev src/server.ts*. Com essa configuração, não precisamos digitar *yarn ts-node-dev src/server.ts* toda vez que executarmos o projeto.
 
 --- 
@@ -82,30 +82,31 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 
 ### Formas de usar banco de dados no projeto:
 * Inserir driver de um BD no projeto, logo usuraremos código SQL;
-* Knex.js: é um query builder(construtor de consultas).  Não precisamos mexer tanto com sintaxe SQL e tem integração com vários tipos de Banco de Dados(MySQL, SQLite3, Postgres, etc)
-* TypeORM(Object Relacional Mapper): transforma objetos do código para entidade, assim o banco de dados compreende a sintaxe.
+* [Knex.js](http://knexjs.org/): é um query builder(construtor de consultas).  Não precisamos mexer tanto com sintaxe SQL e tem integração com vários tipos de Banco de Dados(MySQL, SQLite3, Postgres, etc)
+* [TypeORM(Object Relacional Mapper)](https://typeorm.io/#/): transforma objetos do código para entidade, assim o banco de dados compreende a sintaxe.
 
 Obs: não é aconselhável usar SQLite com o projeto em produção por não ser tão robusto quando outros bancos. 
 
-### Comando para instalar
-* yarn add typeorm reflect-metadata sqlite3 -> baixa as 3 dependências de uma vez(). *reflect-metadata* nos permite adicionar os *decorators*(@) as classes e funções, lhes atribuindo um apelido.
+### Instalação 
+* _yarn add typeorm reflect-metadata sqlite3_ -> baixa as 3 dependências de uma vez(). *reflect-metadata* nos permite adicionar os *decorators*(@) as classes e funções, lhes atribuindo um apelido.
 *
 ### Migrations 
   É um controle de versionamento de código SQL. Mantem a versão mais recente dos códigos do Banco de dados, assim todo time usa a mesma versão. Nesse projeto, é usado o TypeORM Migrations.
   
-* Documentação TypeORM: https://typeorm.io/#/
+* Documentação do TypeORM: https://typeorm.io/#/
+
 ### Comandos de migration:
-* yarn typeorm migration:create -n *NameEntity* -> cria um arquivo de uma entidade
-* yarn typeorm migration:run -> cadastra a migration com os dados SQL digitados
-* yarn typeorm migration:revert -> remove a última migration cadastrada
+* _yarn typeorm migration:create -n NameEntity_ -> cria um arquivo de uma entidade
+* _yarn typeorm migration:run_-> cadastra a migration com os dados SQL digitados
+* _yarn typeorm migration:revert_-> remove a última migration cadastrada
 
 ### Camadas do projeto:
-* Entity -> fica registrado as entidades que serão passadas pro banco
-* Repository -> responsável por fazer a comunicação(CREATE, READ, UPDATE, DELETE) entre a entidade e o BD.
-* Service -> as regras gerais do projeto, responsável pela autenticação, verificação, etc.
-* Controller -> Seria **request, response**: recebe as informações do servidor e as passa para a camada service.
+* __Entity__ -> fica registrado as entidades que serão passadas pro banco
+* __Repository__ -> responsável por fazer a comunicação entre a entidade e o BD.
+* __Service__ -> as regras gerais do projeto, responsável pela autenticação, verificação, etc.
+* __Controller__ -> Igual os métodos **request, response**. Nesse caso, o Controller recebe as informações do servidor e as passa para a camada Service.
 
-Arquivo *routes.ts* -> novo arquivo onde ficarão as rotas que serão passadas para o Controller.
+Arquivo criado *routes.ts* -> arquivo onde ficarão as rotas que serão passadas para o Controller.
 
 ---
 Licença MIT ©
