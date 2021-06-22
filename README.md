@@ -32,11 +32,12 @@ $ git clone https://github.com/zthiago15/NLW-06
 $ yarn dev
 ```
 
-O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http://localhost:3000/** +
+O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http://localhost:3000/** + *rota*
 
 ## Rotas atuais do projeto: 
 * `/test` -> Testando rota GET
 * `/test-post` -> Testando rota POST
+* `/users` -> Criar usuário
 
 ## Aula 1 - Litoff (Anotações 📝)
 
