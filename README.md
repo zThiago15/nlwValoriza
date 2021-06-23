@@ -139,17 +139,17 @@ Arquivo criado *routes.ts* -> arquivo onde ficarão as rotas que serão passadas
 ## Aula 3 - In Orbit - Criando estrutura de tags(Anotações 📝) 
 
 #### Middleware
-    Interceptar a nossa rota, faz a verificação para ver se o usuário pode continuar para seu destino pela requisição que ele fez, se não puder
-retornamos um Status Code com a mensagem do porquê. Então o usaremos para tratar os erros ao invés de usar *try, catch* toda vez. 
-No projeto, caso o usuário tentar acessar a rota para criar tags sem ser um admin, o middleware irá retornar um Erro Status 401: Unauthourized.
+   Intercepta a nossa rota, ou seja, faz a verificação para ver se o usuário pode continuar para seu destino pela requisição que ele fez.
+se não puder retornamos um Status Code com a mensagem do porquê. Então o usaremos para tratar os erros ao invés de usar *try, catch* toda hora. 
+No projeto, usamos: caso o usuário tente acessar a rota para criar tags sem ser um admin, o middleware irá retornar um Erro Status 401: Unauthourized.
 
 ### Funções 
 
 #### FindOne
-    É uma função que seleciona, em sintaxe SQL, um parâmetro. Ex: SELECT * FROM tags WHERE name = 'dado_passado';
+   É uma função que seleciona, em sintaxe SQL, um parâmetro. Ex: SELECT * FROM tags WHERE name = 'dado_passado';
 
 #### NextFunction 
-    Uma função do express, irá levar o usuário para a página requisitada, caso o middleware permitir o acesso após a verificação.
+   Uma função do express, irá levar o usuário para a página requisitada, caso o middleware permitir o acesso após a verificação.
 
 #### Comandos
 * _yarn add express-async-erros_ -> biblioteca para tratar erros assíncronos.
