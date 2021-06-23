@@ -39,6 +39,30 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 * `/test-post` -> Testando rota POST
 * `/users` -> Criar usuário
 
+### Regras
+
+- Cadastro de usuário
+
+[ x ] Não é permitido cadastrar mais de um usuário com o mesmo em-mail
+
+[ x ] Não é permitido cadastrar usuário sem e-mail
+
+- Cadastro de TAG
+- 
+[ x ] Não é permitido cadastrar tag sem nome
+
+[ x ] Não é permitido cadastrar mais de uma tag com o mesmo nome
+
+[ x ] Não é permitido o cadastro por usuários que não sejam administradores
+
+- Cadastro de elogios
+ 
+[ ] Não é permitido um usuário cadastrar um elogio para si
+
+[ ] Não é permitido cadastrar elogios para usuários inválidos
+
+[ ] O usuário precisar estar autenticado na aplicação
+
 ## Aula 1 - Liftoff (Anotações 📝)
 
 ### Origem e funcionamento do Node.js
@@ -76,6 +100,8 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 
 ## Aula 2 - Maximun Speed (Anotações 📝)
 
+### Criando estrutura de usuários
+
 ### Tipos de parâmetros nas requisições(GET, POST, PUT, DELETE..)
 * __Route params__ -> parâmetros dentro da rota. Ex: http://localhost:3000/livro/**69865498**
 * __Query params__ -> filtro/pesquisa do usuário(parâmetro opcional). Ex: http://localhost:3000/jogo**?name=red-dead-redemption&price=100**
@@ -111,6 +137,30 @@ Obs: não é aconselhável usar SQLite com o projeto em produção por não ser 
 * __Controller__ -> Igual os métodos **request, response**. Nesse caso, o Controller recebe as informações do servidor e as passa para a camada Service.
 
 Arquivo criado *routes.ts* -> arquivo onde ficarão as rotas que serão passadas para o Controller.
+
+## Aula 3 - In Orbit(Anotações 📝)
+
+### Criando estrutura de tags
+
+#### Middleware
+    Interceptar a nossa rota, faz a verificação para ver se o usuário pode continuar para seu destino pela requisição que ele fez, se não puder
+retornamos um Status Error com a mensagem do porquê. Então o usaremos para tratar os erros ao invés de usar *try, catch* toda vez. 
+No projeto, caso o usuário tentar acessar a rota para criar tags sem ser um admin, o middleware irá retornar um Erro Status 401: Unathourized.
+
+### Funções 
+
+#### FindOne
+    É uma função que seleciona, em sintaxe SQL, um parâmetro. Ex: SELECT * FROM tags WHERE name = 'dado_passado';
+
+#### NextFunction 
+    Uma função do express, irá levar o usuário para a página requisitada, caso o middleware permitir o acesso após a verificação.
+
+#### Comandos
+* _yarn add express-async-erros_ -> biblioteca para tratar erros assíncronos.
+
+Obs: Estamos criando as classes de repositórios, mesmo sem usá-la, para quando utilizarmos seus métodos não precisarmos fazer muitas 
+alterações no projeto, caso o colocassemos em outra camada.
+
 
 ---
 Licença MIT ©
