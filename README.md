@@ -49,7 +49,7 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 [ x ] Não é permitido cadastrar usuário sem e-mail
 
 - Cadastro de TAG
-- 
+
 [ x ] Não é permitido cadastrar tag sem nome
 
 [ x ] Não é permitido cadastrar mais de uma tag com o mesmo nome
