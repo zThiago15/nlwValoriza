@@ -58,11 +58,11 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 
 - Cadastro de elogios
  
-- [] Não é permitido um usuário cadastrar um elogio para si
+- [ ] Não é permitido um usuário cadastrar um elogio para si
 
-- [] Não é permitido cadastrar elogios para usuários inválidos
+- [ ] Não é permitido cadastrar elogios para usuários inválidos
 
-- [] O usuário precisar estar autenticado na aplicação
+- [ ] O usuário precisar estar autenticado na aplicação
 
 ## Aula 1 - Liftoff - Criando projeto (Anotações 📝)
 
