@@ -146,7 +146,7 @@ No projeto, usamos para o seguinte caso: se o usuário tente acessar a rota para
 ### Funções 
 
 #### FindOne
-   É uma função que seleciona, em sintaxe SQL, um parâmetro. Ex: SELECT * FROM tags WHERE name = 'dado_passado';
+   É uma função que seleciona, em sintaxe SQL, um parâmetro. Ex: __SELECT * FROM tags WHERE name = 'dado_passado';__
 
 #### NextFunction 
    Uma função do express, irá levar o usuário para a página requisitada, caso o middleware permitir o acesso após a verificação.
