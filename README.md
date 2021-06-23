@@ -63,7 +63,7 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 
 [ ] O usuário precisar estar autenticado na aplicação
 
-## Aula 1 - Liftoff (Anotações 📝)
+## Aula 1 - Liftoff - Criando projeto (Anotações 📝)
 
 ### Origem e funcionamento do Node.js
   Criado por Ryan Dahl, em 2009, pela necessidade de saber o progresso de seu upload, porém sempre precisar fazer novas requisições para saber a porcentagem do envio. Após pesquisas, Ryan percebeu que JavaScript aceita requisições assíncronas e iniciou o desenvolvimento do Node.js.
@@ -98,9 +98,7 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 
 --- 
 
-## Aula 2 - Maximun Speed (Anotações 📝)
-
-### Criando estrutura de usuários
+## Aula 2 - Maximun Speed - Criando estrutura de usuários (Anotações 📝)
 
 ### Tipos de parâmetros nas requisições(GET, POST, PUT, DELETE..)
 * __Route params__ -> parâmetros dentro da rota. Ex: http://localhost:3000/livro/**69865498**
@@ -138,14 +136,12 @@ Obs: não é aconselhável usar SQLite com o projeto em produção por não ser 
 
 Arquivo criado *routes.ts* -> arquivo onde ficarão as rotas que serão passadas para o Controller.
 
-## Aula 3 - In Orbit(Anotações 📝)
-
-### Criando estrutura de tags
+## Aula 3 - In Orbit - Criando estrutura de tags(Anotações 📝) 
 
 #### Middleware
     Interceptar a nossa rota, faz a verificação para ver se o usuário pode continuar para seu destino pela requisição que ele fez, se não puder
-retornamos um Status Error com a mensagem do porquê. Então o usaremos para tratar os erros ao invés de usar *try, catch* toda vez. 
-No projeto, caso o usuário tentar acessar a rota para criar tags sem ser um admin, o middleware irá retornar um Erro Status 401: Unathourized.
+retornamos um Status Code com a mensagem do porquê. Então o usaremos para tratar os erros ao invés de usar *try, catch* toda vez. 
+No projeto, caso o usuário tentar acessar a rota para criar tags sem ser um admin, o middleware irá retornar um Erro Status 401: Unauthourized.
 
 ### Funções 
 
