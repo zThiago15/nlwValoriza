@@ -38,6 +38,7 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 * `/test` -> Testando rota GET
 * `/test-post` -> Testando rota POST
 * `/users` -> Criar usuário
+* `/tags` -> Criar tag
 
 ### Regras
 
