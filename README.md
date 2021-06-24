@@ -53,7 +53,7 @@ $ yarn dev
 
 O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http://localhost:3000/** + *rota*
 
-## Rotas atuais do projeto ⬆️
+## Rotas atuais do projeto ⬆️ <a name="routes"></a>
 * `/test` -> Testando rota GET
 * `/test-post` -> Testando rota POST
 * `/users` -> Criar usuário
