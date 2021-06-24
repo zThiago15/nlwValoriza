@@ -11,7 +11,6 @@
 ## Status do projeto:
 🚧 Em andamento... 🚧
 
-
 ---
 
 ## Índice 📖
@@ -61,13 +60,13 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 
 ### Regras do projeto <a name="rules"></a>
 
-- Cadastro de usuário
+- **Cadastro de usuário**
 
 - [x] Não é permitido cadastrar mais de um usuário com o mesmo em-mail
 
 - [x] Não é permitido cadastrar usuário sem e-mail
 
-- Cadastro de TAG
+- **Cadastro de TAG**
 
 - [x] Não é permitido cadastrar tag sem nome
 
@@ -75,7 +74,7 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 
 - [x] Não é permitido o cadastro por usuários que não sejam administradores
 
-- Cadastro de elogios
+- **Cadastro de elogios**
  
 - [ ] Não é permitido um usuário cadastrar um elogio para si
 
