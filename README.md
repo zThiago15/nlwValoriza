@@ -180,8 +180,7 @@ alterações no projeto, caso o colocassemos em outra camada.
 ## Aula 4 - Landing - Criando estrutura de elogios(Anotações 📝) <a name="class4"></a>
 
 ### JWT(Json Web Token) - O que é e como funciona
-    É um padrão de token onde pegamos os dados de usuário pelas requisições(GET, POST, etc), fazer a verificação se
-o usuário pode estar acessando aquela rota e autenticá-lo. Dessa forma, em vez de usar os dados de e-mail e senha toda hora, usamos o token. 
+   É um padrão de token onde pegamos os dados de usuário pelas requisições(GET, POST, etc), fazer a verificação se o usuário pode estar acessando aquela rota e autenticá-lo. Dessa forma, em vez de usar os dados de e-mail e senha toda hora, usamos o token. 
     É **codificado** em 3 partes, divididos por um ponto, classificados em:
 * __Header__ -> tipo do token, algoritmo pra criptografar os dados e gerar o token;
 * __Payload__ -> São propriedades de informações de usuário, como seu id, email, nome, etc. Então quando passamos os dados do *back* pro *front* ou vice-versa, os dados são encriptografados no envio e descriptografados no destino por alguma biblioteca feita para isso. Porém, não passaremos informações sensíveis como senha;
@@ -192,7 +191,7 @@ o usuário pode estar acessando aquela rota e autenticá-lo. Dessa forma, em vez
 * __*yarn add @types/jsonwebtoken -D*__ -> instala suas tipagens em ambiente de desenvolvimento;
 
 ### Criptografia
-    Pra fazer a criptografia da senha, usaremos a lib(library ou biblioteca):
+   Pra fazer a criptografia da senha, usaremos a lib(library ou biblioteca):
 
 * __*yarn add bcryptjs*__ 
 * __*yarn add @types/bcrypt*__ 
