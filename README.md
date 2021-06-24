@@ -4,7 +4,7 @@
 [![nodejs-badge][nodejs-img]][nodejs]
 
 [nodejs-img]: https://img.shields.io/badge/Node.js-v14.17-green
-[nodejs]: js.org/en/
+[nodejs]: https://nodejs.org/en/
 
 ---
 
@@ -206,9 +206,9 @@ Vamos fazer a autenticação dentro da camada **Service** e vamos receber os dad
 * Gerar o token de autenticação: usaremos a função *sign* da biblioteca *jwc*, onde passamos os dados do *payload* e a chave de acesso que colocamos. 
 Usamos o site [MD5 Hash Generator](https://www.md5hashgenerator.com/) para ter mais segurança. No site, digitamos um texto que irá ser convertido em um código MD5 hash e SHA1 hash, então podemos escolher um dos dois para ser a chave.
 
-Obs: mesmo que o erro for no email ou na senha, é uma boa prática de segurança não responder exatamente onde está o erro. Pois caso uma pessoa mal-intencionada estiver acessando o sistema, ela irá saber o campo em que está o erro e atacar ali. Então, dizemos que ambos podem estar incorretos.
+*Obs*: mesmo que o erro for no email ou na senha, é uma boa prática de segurança não responder exatamente onde está o erro. Pois caso uma pessoa mal-intencionada estiver acessando o sistema, ela irá saber o campo em que está o erro e atacar ali. Então, dizemos que ambos podem estar incorretos.
 
-Dica: só usamos o *await* quando é retornado uma *Promise*.
+__Dica__: só usamos o *await* quando é retornado uma *Promise*.
 
 
 ---
