@@ -58,9 +58,9 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 
 - Cadastro de elogios
  
-- [ ] Não é permitido um usuário cadastrar um elogio para si
+- [x] Não é permitido um usuário cadastrar um elogio para si
 
-- [ ] Não é permitido cadastrar elogios para usuários inválidos
+- [x] Não é permitido cadastrar elogios para usuários inválidos
 
 - [ ] O usuário precisar estar autenticado na aplicação
 
@@ -158,6 +158,42 @@ No projeto, usamos para o seguinte caso: se o usuário tente acessar a rota para
 Obs: Estamos criando as classes de repositórios, mesmo sem usá-la, para quando utilizarmos seus métodos não precisarmos fazer muitas 
 alterações no projeto, caso o colocassemos em outra camada.
 
+## Aula 4 - Landing - Criando estrutura de elogios(Anotações 📝)
+
+### JWT(Json Web Token) - O que é e como funciona
+    É um padrão de token onde pegamos os dados de usuário pelas requisições(GET, POST, etc), fazer a verificação se
+o usuário pode estar acessando aquela rota e autenticá-lo. Dessa forma, em vez de usar os dados de e-mail e senha toda hora, usamos o token. 
+    É **codificado** em 3 partes, divididos por um ponto, classificados em:
+* __Header__ -> tipo do token, algoritmo pra criptografar os dados e gerar o token;
+* __Payload__ -> São propriedades de informações de usuário, como seu id, email, nome, etc. Então quando passamos os dados do *back* pro *front* ou vice-versa, os dados são encriptografados no envio e descriptografados no destino por alguma biblioteca feita para isso. Porém, não passaremos informações sensíveis como senha;
+* __Verify Assignature__ -> Irá criar uma verificação de assinaruto concatenando(juntando) o *header* e o *payload*, convertendo-os com o base64 e os juntando com a chave que definimos para então validar e gerar o token.
+
+### Instalação
+* __*yarn add jsonwebtoken*__ -> instala sua bibloteca
+* __*yarn add @types/jsonwebtoken -D*__ -> instala suas tipagens em ambiente de desenvolvimento;
+
+### Criptografia
+    Pra fazer a criptografia da senha, usaremos a lib(library ou biblioteca):
+
+* __*yarn add bcryptjs*__ 
+* __*yarn add @types/bcrypt*__ 
+
+E importaremos seu método **hash()**, onde passamos a senha e o *salt* que é o tamanho da criptografia, por padrão
+usamos 8. Dessa forma, recebemos a senha e a encriptografamos antes de ser salva no banco. Agora a senha não irá aparecer nos registros salvos.
+
+### Autenticação
+Vamos fazer a autenticação dentro da camada **Service** e vamos receber os dados de email e senha. Então, teremos 3 passos para fazer: 
+* Verificar se email existe;
+* Confirmar se a senha está correta;
+* Gerar o token de autenticação: usaremos a função *sign* da biblioteca *jwc*, onde passamos os dados do *payload* e a chave de acesso que colocamos. 
+Usamos o site [MD5 Hash Generator](https://www.md5hashgenerator.com/) para ter mais segurança. No site, digitamos um texto que irá ser convertido em um código MD5 hash e SHA1 hash, então podemos escolher um dos dois para ser a chave.
+
+Obs: mesmo que o erro for no email ou na senha, é uma boa prática de segurança não responder exatamente onde está o erro. Pois caso uma pessoa mal-intencionada estiver acessando o sistema, ela irá saber o campo em que está o erro e atacar ali. Então, dizemos que ambos podem estar incorretos.
+
+Dica: só usamos o *await* quando é retornado uma *Promise*.
+
 
 ---
+
+
 Licença MIT ©
