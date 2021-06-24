@@ -1,3 +1,5 @@
+![banner](https://user-images.githubusercontent.com/61299540/123202984-020f5000-d48c-11eb-8c12-38af40aae04e.png)
+
 # NLW Valoriza (Next Level week - 6ª edição) 🚀
 [![nodejs-badge][nodejs-img]][nodejs]
 
