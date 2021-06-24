@@ -16,6 +16,7 @@
 ## Índice 📖
 * __[Descrição](#description)__
 * __[Tecnologias](#technologies)__
+* __[Rotas atuais](#routes)__
 * __[Regras do projeto](#rules)__
 * __Aulas__
   * __[Aula 1 - Criando projeto](#class1)__
@@ -52,13 +53,13 @@ $ yarn dev
 
 O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http://localhost:3000/** + *rota*
 
-## Rotas atuais do projeto: 
+## Rotas atuais do projeto ⬆️
 * `/test` -> Testando rota GET
 * `/test-post` -> Testando rota POST
 * `/users` -> Criar usuário
 * `/tags` -> Criar tag
 
-### Regras do projeto <a name="rules"></a>
+## Regras do projeto <a name="rules"></a>
 
 - **Cadastro de usuário**
 
