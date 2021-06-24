@@ -4,15 +4,32 @@
 [nodejs-img]: https://img.shields.io/badge/Node.js-v14.17-green
 [nodejs]: js.org/en/
 
+---
+
 ## Status do projeto:
 🚧 Em andamento... 🚧
 
-## Descrição 📌
+
+---
+
+## Índice 📖
+* __[Descrição](#description)__
+* __[Tecnologias](#technologies)__
+* __[Regras do projeto](#rules)__
+* __Aulas__
+  * __[Aula 1 - Criando projeto](#class1)__
+  * __[Aula 2 - Criando estrutura de usuários](#class2)__
+  * __[Aula 3 - Criando estrutura de tags](#class3)__
+  * __[Aula 4 -  Criando estrutura de elogios](#class4)__
+
+---
+
+## Descrição 📌 <a name="description"></a>
 Sistema para fazer elogio a outros usuários por meio de tags. 
 
 --- 
 
-## Tecnologias 💻
+## Tecnologias 💻 <a name="technologies"></a>
 * [Node.js](https://nodejs.org/en/) - Baixe a versão recomendada LTS.
 * [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable) - Gerenciador de pacotes, similar ao npm do Node.js.
 * [Express](https://expressjs.com/pt-br/) - Framework para desenvolver back-end com Node.js.
@@ -22,7 +39,7 @@ Sistema para fazer elogio a outros usuários por meio de tags.
 
 ---
 
-## Execução ✅
+## Execução ✅ <a name="execution"></a>
 ```bash
 
 # Clone este repositório
@@ -40,7 +57,7 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 * `/users` -> Criar usuário
 * `/tags` -> Criar tag
 
-### Regras
+### Regras do projeto <a name="rules"></a>
 
 - Cadastro de usuário
 
@@ -64,7 +81,7 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 
 - [ ] O usuário precisar estar autenticado na aplicação
 
-## Aula 1 - Liftoff - Criando projeto (Anotações 📝)
+## Aula 1 - Liftoff - Criando projeto (Anotações 📝) <a name="class1"></a>
 
 ### Origem e funcionamento do Node.js
   Criado por Ryan Dahl, em 2009, pela necessidade de saber o progresso de seu upload, porém sempre precisar fazer novas requisições para saber a porcentagem do envio. Após pesquisas, Ryan percebeu que JavaScript aceita requisições assíncronas e iniciou o desenvolvimento do Node.js.
@@ -99,7 +116,7 @@ Obs: Os navegadores suportam somente os métodos GET ou POST por algum formulár
 
 --- 
 
-## Aula 2 - Maximun Speed - Criando estrutura de usuários (Anotações 📝)
+## Aula 2 - Maximun Speed - Criando estrutura de usuários (Anotações 📝) <a name="class2"></a>
 
 ### Tipos de parâmetros nas requisições(GET, POST, PUT, DELETE..)
 * __Route params__ -> parâmetros dentro da rota. Ex: http://localhost:3000/livro/**69865498**
@@ -137,7 +154,7 @@ Obs: não é aconselhável usar SQLite com o projeto em produção por não ser 
 
 Arquivo criado *routes.ts* -> arquivo onde ficarão as rotas que serão passadas para o Controller.
 
-## Aula 3 - In Orbit - Criando estrutura de tags(Anotações 📝) 
+## Aula 3 - In Orbit - Criando estrutura de tags(Anotações 📝) <a name="class3"></a>
 
 ### Middleware
    Intercepta a nossa rota, ou seja, faz a **verificação** para ver se o usuário pode continuar para seu destino pela requisição que ele fez.
@@ -158,7 +175,7 @@ No projeto, usamos para o seguinte caso: se o usuário tente acessar a rota para
 Obs: Estamos criando as classes de repositórios, mesmo sem usá-la, para quando utilizarmos seus métodos não precisarmos fazer muitas 
 alterações no projeto, caso o colocassemos em outra camada.
 
-## Aula 4 - Landing - Criando estrutura de elogios(Anotações 📝)
+## Aula 4 - Landing - Criando estrutura de elogios(Anotações 📝) <a name="class4"></a>
 
 ### JWT(Json Web Token) - O que é e como funciona
     É um padrão de token onde pegamos os dados de usuário pelas requisições(GET, POST, etc), fazer a verificação se
