@@ -23,7 +23,7 @@
   * __[Aula 2 - Criando estrutura de usuários](#class2)__
   * __[Aula 3 - Criando estrutura de tags](#class3)__
   * __[Aula 4 -  Criando estrutura de elogios](#class4)__
-  *__[Aula 5 - Finalizando projeto](#class5)__
+  * __[Aula 5 - Finalizando projeto](#class5)__
 
 ---
 
@@ -33,12 +33,12 @@ Sistema para fazer elogio a outros usuários por meio de tags.
 --- 
 
 ## Tecnologias 💻 <a name="technologies"></a>
-* [Node.js](https://nodejs.org/en/) - Baixe a versão recomendada LTS.
-* [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable) - Gerenciador de pacotes, similar ao npm do Node.js.
-* [Express](https://expressjs.com/pt-br/) - Framework para desenvolver back-end com Node.js.
-* [TypeScript](https://www.typescriptlang.org/) - É JavaScript com tipagem de dados e recursos adicionais, voltado ao lado servidor.
-* [Beekeeper](https://www.beekeeperstudio.io/) - Gerenciador de Banco de Dados e editor de código SQL.
-* [Insomnia](https://insomnia.rest/) - É um programa que testa as requisições de uma API(GET, POST, PUT, DELETE, PATCH, etc).
+* __[Node.js](https://nodejs.org/en/)__ - Baixe a versão recomendada LTS.
+* __[Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)__ - Gerenciador de pacotes, similar ao npm do Node.js.
+* __[Express](https://expressjs.com/pt-br/)__ - Framework para desenvolver back-end com Node.js.
+* __[TypeScript](https://www.typescriptlang.org/)__ - É JavaScript com tipagem de dados e recursos adicionais, voltado ao lado servidor.
+* __[Beekeeper](https://www.beekeeperstudio.io/)__ - Gerenciador de Banco de Dados e editor de código SQL.
+* __[Insomnia](https://insomnia.rest/)__ - É um programa que testa as requisições de uma API(GET, POST, PUT, DELETE, PATCH, etc).
 
 ---
 
@@ -195,7 +195,7 @@ alterações no projeto, caso o colocassemos em outra camada.
 * __Payload__ -> São propriedades de informações de usuário, como seu id, email, nome, etc. Então quando passamos os dados do *back* pro *front* ou vice-versa, os dados são encriptografados no envio e descriptografados no destino por alguma biblioteca feita para isso. Porém, não passaremos informações sensíveis como senha;
 * __Verify Assignature__ -> Irá criar uma verificação de assinaruto concatenando(juntando) o *header* e o *payload*, convertendo-os com o base64 e os juntando com a chave que definimos para então validar e gerar o token.
 
-### Instalação
+### Instalação do JWT
 * __*yarn add jsonwebtoken*__ -> instala sua bibloteca
 * __*yarn add @types/jsonwebtoken -D*__ -> instala suas tipagens em ambiente de desenvolvimento;
 
@@ -222,7 +222,7 @@ __Dica__: só usamos o *await* quando é retornado uma *Promise*.
 ---
 ## Aula 5 - Surface Exploration - Finalizando projeto(Anotações 📝) <a name="class5"></a>
 
-    Na aula anterior autenticamos o admin, agora iremos fazer o mesmo com o usuário. Então usaremos o *middleware* pra interceptar
+   Na aula anterior autenticamos o admin, agora iremos fazer o mesmo com o usuário. Então usaremos o *middleware* pra interceptar
 a rota e verificar se o usuário está mesmo autenticado para seguir ao seu destino. Então teremos os seguintes passos:
 * Receber o token gerado do usuário;
 * Validar se o token está preenchido;
@@ -256,14 +256,14 @@ Obs: podemos ter rotas com o mesmo nome se elas forem de métodos diferentes.
 * ... -> recupera todos os dados de um objeto. Ex: {...tag}.
 
 ### Customizar dados
-    A biblioteca class-transformer nos permite customizar uma classe. No nosso caso, usaremos para dois casos:
+   A biblioteca class-transformer nos permite customizar uma classe. No nosso caso, usaremos para dois casos:
 * Customizar tag pro usuário, usando o @Expose;
 * Excluir a coluna senha pro usuário, usando o @Exclude.
 E, no final, as retornaremos utilizando a função *classToPlain()* que transforma objetos da classe em objetos JS para serem passados em um JSON.
 
 
-#### Instalação
-__*yarn add class-transformer*__
+#### Instalação do class-transformer
+* __*yarn add class-transformer*__ 
 
 
 ---
