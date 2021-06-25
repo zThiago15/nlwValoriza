@@ -23,6 +23,7 @@
   * __[Aula 2 - Criando estrutura de usuários](#class2)__
   * __[Aula 3 - Criando estrutura de tags](#class3)__
   * __[Aula 4 -  Criando estrutura de elogios](#class4)__
+  *__[Aula 5 - Finalizando projeto](#class5)__
 
 ---
 
@@ -42,6 +43,7 @@ Sistema para fazer elogio a outros usuários por meio de tags.
 ---
 
 ## Execução ✅ <a name="execution"></a>
+
 ```bash
 
 # Clone este repositório
@@ -51,13 +53,20 @@ $ git clone https://github.com/zthiago15/NLW-06
 $ yarn dev
 ```
 
-O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http://localhost:3000/** + *rota*
+O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http://localhost:3000/** + *rotas GET*.
+Obs: browsers só tem suporte para fazer requisições de método GET. Baixe o [Imsomnia](https://insomnia.rest/) para testar todas as rotas.
 
 ## Rotas atuais do projeto ⬆️ <a name="routes"></a>
-* `/test` -> Testando rota GET
-* `/test-post` -> Testando rota POST
-* `/users` -> Criar usuário
-* `/tags` -> Criar tag
+* __POST__
+    * `/tags` -> Criar nova tag
+    * `/users` -> Criar novo usuário
+    * `/login` -> Auntenticar usuário
+    * `/compliments` -> Cadastrar elogio (administrador)
+* __GET__
+    * `/tags` -> Listas as tags cadastradas
+    * `/users` -> Listar todos os usuários cadastrados
+    * `/users/compliments/send` -> Listar elogios enviados
+    * `/users/compliments/receive` -> Listar elogios recebidos
 
 ## Regras do projeto <a name="rules"></a>
 
@@ -77,11 +86,11 @@ O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http:/
 
 - **Cadastro de elogios**
  
-- [ ] Não é permitido um usuário cadastrar um elogio para si
+- [x] Não é permitido um usuário cadastrar um elogio para si
 
-- [ ] Não é permitido cadastrar elogios para usuários inválidos
+- [x] Não é permitido cadastrar elogios para usuários inválidos
 
-- [ ] O usuário precisar estar autenticado na aplicação
+- [x] O usuário precisar estar autenticado na aplicação
 
 ## Aula 1 - Liftoff - Criando projeto (Anotações 📝) <a name="class1"></a>
 
@@ -210,8 +219,54 @@ Usamos o site [MD5 Hash Generator](https://www.md5hashgenerator.com/) para ter m
 
 __Dica__: só usamos o *await* quando é retornado uma *Promise*.
 
+---
+## Aula 5 - Surface Exploration - Finalizando projeto(Anotações 📝) <a name="class5"></a>
+
+    Na aula anterior autenticamos o admin, agora iremos fazer o mesmo com o usuário. Então usaremos o *middleware* pra interceptar
+a rota e verificar se o usuário está mesmo autenticado para seguir ao seu destino. Então teremos os seguintes passos:
+* Receber o token gerado do usuário;
+* Validar se o token está preenchido;
+* Verificar se o token é válido;
+* Recuperar informações do usuário.
+
+Obs: No Imsomnia, temos o *Bearer token* onde passamos o token gerado do usuário.
+
+
+Vamos adicionar o *user_id* como um objeto que vai vir do *request* do usuário. Mas na biblioteca padrão, não temos ele, o TypeScript permite que sobrescrevamos algumas tipagens, então iremos adicionar essa nova tipagem em uma arquivo e pasta com o mesmo nome da lib(library) original e adicionar esse caminho na propriedade *typeRoots*, que são pacotes de tipagem do arquivo *tsconfig.json* para poder 
+reconhecer essa tipagem adicionada.
+
+Criamos mais 4 rotas: 
+
+* lista de elogios enviados -> __/users/compliments/send__ (Método POST)
+* lista de elogios recebidos -> __/users/compliments/send__ (Método POST)
+* lista de usuários cadastrados -> __/users__ (Método GET)
+* lista de tags cadastradas -> __/tags__ (Método GET)
+
+Também garantindo que o usuário esteja autenticado antes de ir para o seu destino.
+
+### Funções
+* _end()_ -> retorna response padrão do status. Ex: response.status(401).end();
+* _find()_ -> retorna todos os registros.
+*_classToPlain()_* -> irá criar novos objetos a partir dos objetos que ela recebe, faz parte da biblioteca *class-transformer*.
+
+* Podemos também trazer todas as informações da listagem de elogios recebidos e enviados com o *relations:["nameObject"]* após a propriedade *where* de sua camada Service.
+
+Obs: podemos ter rotas com o mesmo nome se elas forem de métodos diferentes.
+
+* ... -> recupera todos os dados de um objeto. Ex: {...tag}.
+
+### Customizar dados
+    A biblioteca class-transformer nos permite customizar uma classe. No nosso caso, usaremos para dois casos:
+* Customizar tag pro usuário, usando o @Expose;
+* Excluir a coluna senha pro usuário, usando o @Exclude.
+E, no final, as retornaremos utilizando a função *classToPlain()* que transforma objetos da classe em objetos JS para serem passados em um JSON.
+
+
+#### Instalação
+__*yarn add class-transformer*__
+
 
 ---
 
-
 Licença MIT ©
+
