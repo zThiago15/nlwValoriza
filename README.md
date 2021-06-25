@@ -54,7 +54,7 @@ $ yarn dev
 ```
 
 O servidor vai se iniciar na porta :3000. Acesse no seu navegador a URL **http://localhost:3000/** + *rotas GET*.
-Obs: browsers só tem suporte para fazer requisições de método GET. Baixe o [Imsomnia](https://insomnia.rest/) para testar todas as rotas.
+Obs: browsers só tem suporte para fazer requisições de método GET. Baixe o [Imsomnia](https://insomnia.rest/download) para testar todas as rotas.
 
 ## Rotas atuais do projeto ⬆️ <a name="routes"></a>
 * __POST__
