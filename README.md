@@ -9,7 +9,7 @@
 ---
 
 ## Status do projeto:
-🚧 Em andamento... 🚧
+Finalizado ✅
 
 ---
 
